@@ -1,0 +1,26 @@
+builddir = dist
+
+stylus = stylus
+rollup = rollup
+
+nui_js = dist/js/nui.js
+nui_css = dist/css/nui.css
+
+rule stylus
+  command = ${stylus} $in -p > $out
+  description = STYLUS $out
+rule rollup
+  command = ${rollup} -c
+  description = ROLLUP $out
+rule puer
+  command = puer --no-launch -p 8088
+
+build ${nui_css}: stylus src/assets/styl/index.styl
+build ${nui_js}: rollup src/index.js
+
+build build_css: phony || ${nui_css}
+build build_js: phony || ${nui_js}
+build dev: puer
+build all: phony build_css build_js
+
+default all

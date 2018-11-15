@@ -1,7 +1,7 @@
 {
   "name": "nui",
   "version": "0.1.0",
-  "description": "",
+  "description": "My uiv for Bootstrap 3 component lib implemented by Vue 2.",
   "main": "dist/js/nui.js",
   "repository": "git@gitee.com:hilarryxu1/uiv.git",
   "author": "Larry Xu <hilarryxu@gmail.com>",
