@@ -15,9 +15,10 @@ rule rollup
 rule puer
   command = puer --no-launch -p 8088
 
-build ${nui_css}: stylus src/assets/styl/index.styl
-build ${nui_js}: rollup src/index.js | rollup.config.js $
-  package.json
+build ${nui_css}: stylus src/assets/styl/index.styl | $
+    src/assets/styl/_variables.styl
+build ${nui_js}: rollup src/index.js | $
+    rollup.config.js package.json
 
 build build_css: phony || ${nui_css}
 build build_js: phony || ${nui_js}
