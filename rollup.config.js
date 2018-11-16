@@ -10,8 +10,14 @@ export default {
   output: {
     file: pkg.main,
     format: 'umd',
-    name: 'nui'
+    name: 'nui',
+    globals: {
+      jquery: 'jQuery'
+    }
   },
+  external: [
+    'jquery'
+  ],
   plugins: [
     vue(),
     npm({
@@ -20,6 +26,6 @@ export default {
       browser: true  // if provided for browsers
     }),
     buble(),
-    uglify({}, minify)
+    // uglify({}, minify)
   ]
 }
