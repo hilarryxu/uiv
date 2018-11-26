@@ -11,8 +11,9 @@ rule puer
   command = puer --no-launch -p 8088
 
 build ${nui_css}: stylus src/assets/styl/index.styl | $
-    src/assets/styl/_variables.styl $
-    src/assets/styl/form.styl
+    src/assets/styl/form.styl $
+    src/assets/styl/btn.styl $
+    src/assets/styl/_variables.styl
 
 build build_css: phony || ${nui_css}
 build dev: puer
