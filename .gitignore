@@ -1,10 +1,9 @@
+*.sublime-workspace
+
 dist/.ninja_deps
 dist/.ninja_log
-dist/css/nui.css
-dist/css/nui.min.css
-dist/js/nui.js
-dist/js/nui.min.js
-dist/js/vue.min.js
+dist/css/uiv.css
+dist/css/uiv.min.css
 
 node_modules/
 tmp/

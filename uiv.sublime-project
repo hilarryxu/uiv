@@ -1,0 +1,14 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [".git", "node_modules", "tmp"],
+      "file_exclude_patterns": [".DS_Store", "*.sublime-workspace", "tags"]
+    },
+  ],
+  "settings":
+  {
+    "index_exclude_patterns": ["tags"]
+  },
+}

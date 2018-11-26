@@ -1,28 +1,20 @@
 builddir = dist
 
 stylus = stylus
-rollup = rollup
 
-nui_js = dist/js/nui.js
-nui_css = dist/css/nui.css
+nui_css = dist/css/uiv.css
 
 rule stylus
   command = ${stylus} $in -p > $out
   description = STYLUS $out
-rule rollup
-  command = ${rollup} -c
-  description = ROLLUP $out
 rule puer
   command = puer --no-launch -p 8088
 
 build ${nui_css}: stylus src/assets/styl/index.styl | $
     src/assets/styl/_variables.styl
-build ${nui_js}: rollup src/index.js | $
-    rollup.config.js package.json
 
 build build_css: phony || ${nui_css}
-build build_js: phony || ${nui_js}
 build dev: puer
-build all: phony build_css build_js
+build all: phony build_css
 
 default all
