@@ -14,6 +14,7 @@ build ${nui_css}: stylus src/assets/styl/index.styl | $
     src/assets/styl/table.styl $
     src/assets/styl/form.styl $
     src/assets/styl/btn.styl $
+    src/assets/styl/tab.styl $
     src/assets/styl/_variables.styl
 
 build build_css: phony || ${nui_css}

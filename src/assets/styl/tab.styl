@@ -1,0 +1,65 @@
+.nav-tabs
+  > li
+    margin-left: -1px
+    border-top: 1px solid #ddd
+    border-left: 1px solid #ddd
+    border-right: 1px solid #ddd
+    z-index: 1
+
+    &.active
+      border-top: 0
+      border-left: 1px solid #ddd
+      border-right: 1px solid #ddd
+      z-index: 3
+
+    > a
+      color: #666
+      margin-right: 0
+      padding: 10px 16px
+      background: #fbfaf8
+      border-left: 0
+      border-right: 0
+      border-bottom: 0
+      border-radius: 0
+
+      &:hover
+        color: #09c
+        background-color: #fff
+
+    &.active > a
+      &,
+      &:hover,
+      &:focus
+        border-top: 2px solid #00a2ca
+        border-left: 0
+        border-right: 0
+        border-bottom: 1px solid #fff
+        color: #333
+
+.nav-pills
+  > li
+    width: 115px
+    text-align: center
+
+    > a
+      height: 32px
+      margin-left: 2px
+      padding: 6px 12px
+      line-height: 20px
+      color: #666
+      background-color: #d9dee4
+      border: 1px solid #d9dee4
+      border-radius: 0
+      
+      &:hover,
+      &:focus
+        color: #444
+        background-color: #dce2e7
+
+    &.active > a
+      &,
+      &:hover,
+      &:focus
+        color: #fff
+        background-color: #546478
+        border: 1px solid #546478
