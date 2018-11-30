@@ -1,5 +1,5 @@
+// Core variables and mixins
 @import '_variables'
-
 @import 'bootstrap'
 
 // - typo
@@ -9,31 +9,12 @@ body
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei"
 
-// - table
-.table
-  background: #FFF
-  font-size: 12px
-  border-top: 1px solid #e1e6eb
-  margin-top: 8px
-  border: 1px solid #e1e6eb
-
-.table thead tr th
-  padding: 8px 8px
-  font-weight: normal
-  color: #999
-  border-bottom: 1px solid #e1e6eb
-  background-color: #F5F6FA
-
-.table tbody tr td
-  padding: 12px 8px
-  border-top: 0px
-  border-bottom: 1px solid #E1E6EB
-  vertical-align: middle
-
-
+// Core CSS
+@import 'table'
 @import 'form'
 @import 'btn'
 
+// Components
 // - alert
 .alert
   padding: 6px 12px
